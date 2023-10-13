@@ -1,5 +1,44 @@
 {
   "dependencies": {
+    "com.agava.vkgames": {
+      "version": "https://github.com/mdlka/com.agava.vkgames.git#2.0.1",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "d60ebb7db4f72bc9848487d869cbf29a1e26f28e"
+    },
+    "com.agava.webutility": {
+      "version": "https://github.com/forcepusher/com.agava.webutility.git#3.0.0",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "8b3ff533346e27727613880171be328b15cb4e84"
+    },
+    "com.agava.yandexgames": {
+      "version": "https://github.com/forcepusher/com.agava.yandexgames.git#13.3.0",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "b103dfa3323d73e7edecd44b9760b4a4a93109c4"
+    },
+    "com.unity.ai.navigation": {
+      "version": "1.1.5",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.ai": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.cinemachine": {
+      "version": "2.9.7",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.test-framework": "1.1.31"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.collab-proxy": {
       "version": "2.0.5",
       "depth": 0,
@@ -65,6 +104,15 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.recorder": {
+      "version": "4.0.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.timeline": "1.0.0"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.settings-manager": {
