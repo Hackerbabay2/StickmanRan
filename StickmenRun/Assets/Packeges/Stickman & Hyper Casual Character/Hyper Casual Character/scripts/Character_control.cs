@@ -4,21 +4,34 @@ using UnityEngine;
 
 public class Character_control : MonoBehaviour
 {
-    public int animation_num;
+    public int animationNumber;
 
+    private int _previousAnimationNumber;
     private Animator animator;
 
-    // Start is called before the first frame update
     void Start()
     {
+        _previousAnimationNumber = animationNumber;
         this.animator = this.GetComponent<Animator>();
-
-        this.animator.SetBool("animation_" + this.animation_num, true);
+        this.animator.SetBool("animation_" + animationNumber, true);
     }
 
-    // Update is called once per frame
+    private void OnEnable()
+    {
+        _previousAnimationNumber = animationNumber;
+        this.animator = this.GetComponent<Animator>();
+        this.animator.SetBool("animation_" + animationNumber, true);
+    }
+
+    public void StartAnimation()
+    {
+        this.animator.SetBool("animation_" + _previousAnimationNumber, false);
+        this.animator.SetBool("animation_" + animationNumber, true);
+        _previousAnimationNumber = animationNumber;
+    }
+
     void Update()
     {
-        
+
     }
 }

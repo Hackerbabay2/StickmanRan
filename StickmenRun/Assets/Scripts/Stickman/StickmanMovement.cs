@@ -22,8 +22,14 @@ public class StickmanMovement : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            _xDirection = (_elemetaryX.x - Input.mousePosition.x) / _sensitivity;
-            transform.position = new Vector3(_startX - _xDirection, transform.position.y, transform.position.z);
+            // Получаем позицию мыши в экранных координатах
+            Vector3 mousePosition = Input.mousePosition;
+
+            // Преобразуем позицию мыши из экранных координат в мировые координаты
+            Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, transform.position.y));
+
+            // Устанавливаем позицию объекта на уровне позиции мыши по оси X
+            transform.position = new Vector3(worldMousePosition.x * _sensitivity, transform.position.y, transform.position.z);
         }
 
         if (transform.position.x >= 10)

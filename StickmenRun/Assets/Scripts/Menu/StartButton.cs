@@ -10,6 +10,11 @@ public class StartButton : MonoBehaviour
     public void StartLevel()
     {
         _stickmanMovement.enabled = true;
+
+        foreach (AiUnit unit in AiManager.Instance.Units)
+        {
+            unit.SetAnim(8);
+        }
         _menu.SetActive(false);
     }
 }
